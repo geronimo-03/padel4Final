@@ -1,0 +1,931 @@
+:root {
+  --colorLila: #56588f;
+  --colorRojo: #d6241c;
+  --colorazul: #4349A2;
+  --FuentePrincipal: 'Barlow', sans-serif;
+}
+
+.borde {
+  border: 1px solid #d6241c;
+  border-radius: 2px;
+}
+
+.color-club {
+  padding: 20px;
+  background-color: rgba(80, 76, 76, 0.281);
+  border-radius: 2px;
+}
+
+.color-bar {
+  padding: 20px;
+  background-color: rgba(80, 76, 76, 0.281);
+  border-radius: 2px;
+}
+
+body {
+  font-family: var(--FuentePrincipal);
+  scroll-behavior: smooth;
+
+  background-color: black;
+
+}
+
+h4 {
+  font-weight: 900;
+}
+
+a {
+  text-decoration: none;
+}
+
+section[id] {
+  scroll-margin-top: 130px;
+}
+
+.borde-club {
+  border: none;
+}
+
+
+.navbar-brand img {
+  margin-left: -40px;
+}
+
+hr.divider {
+
+  max-width: 3.25rem;
+  margin: 1.5rem auto;
+  margin-top: 1.5rem;
+  margin-right: auto;
+  margin-bottom: 1.5rem;
+  margin-left: auto;
+  color: var(--colorRojo) !important;
+  opacity: 1;
+}
+
+.navbar {
+  padding-top: 0 !important;
+
+}
+
+.navbar .container {
+  background-color: black;
+  max-width: 100%;
+  height: auto;
+  border: none;
+  border-radius: 0;
+}
+
+.navbar .nav-item .nav-link {
+  padding: 1.0rem;
+  text-align: center;
+
+}
+
+.navbar .nav-item .nav-link:hover {
+  color: var(--colorRojo);
+}
+
+.boton-turno {
+
+  margin-top: 20px;
+  border-bottom: none !important;
+
+}
+
+/* Añade al final de tu archivo CSS */
+.hamburger-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1100;
+  /* Asegúrate de que tenga un z-index superior al menú colapsado */
+}
+
+.hamburger {
+  height: 50px;
+  width: 50px;
+  position: relative;
+}
+
+.checkbox {
+  position: absolute;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+}
+
+.line {
+  transition: 0.5s;
+  stroke-width: 4px;
+  stroke: var(--colorRojo);
+  /* Color de la línea cuando está cerrado */
+}
+
+.lineTop {
+  stroke-dasharray: 40 40;
+  stroke-dashoffset: 25;
+}
+
+.lineBottom {
+  stroke-dasharray: 40 40;
+  stroke-dashoffset: 60;
+}
+
+.lineMid {
+  stroke-dasharray: 40 40;
+}
+
+.checkbox:checked+svg .line {
+  stroke: rgb(255, 255, 255);
+  /* Color de la línea cuando está abierto */
+}
+
+.checkbox:checked+svg .lineTop {
+  stroke-dashoffset: 0;
+  transform-origin: left;
+  transform: rotateZ(45deg) translate(-7px, -5px);
+}
+
+.checkbox:checked+svg .lineMid {
+  stroke-dashoffset: 40;
+}
+
+.checkbox:checked+svg .lineBottom {
+  stroke-dashoffset: 0;
+  transform-origin: left;
+  transform: rotateZ(-45deg) translate(-5px, 5px);
+}
+
+/* Añadir a tu archivo de estilos CSS */
+
+/* Estilo para el menú colapsado */
+.navbar-collapse-custom {
+  background-color: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  transition: height 0.3s ease;
+}
+
+/* Estilo para los enlaces en el menú colapsado */
+.navbar-collapse-custom .navbar-nav .nav-link {
+  color: white;
+  margin: 10px 0;
+}
+
+/* Estilo para el botón en el menú colapsado */
+.navbar-collapse-custom .navbar-nav .animated-button {
+  margin-top: 20px;
+}
+
+/* Estilo para el ícono del botón en el menú colapsado */
+.navbar-collapse-custom .navbar-toggler-icon {
+  background-color: white;
+}
+
+/* Ajustes adicionales para centrar el contenido */
+.navbar-custom.collapsed .navbar-collapse-custom {
+  display: none;
+}
+
+/* ... Otros estilos existentes ... */
+
+.nav-item {
+  border-bottom: 1px solid var(--colorRojo);
+
+}
+
+.carousel-item {
+  height: 55vh;
+  min-height: 300px;
+}
+
+.carousel-caption {
+  bottom: 2.8rem;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  margin-top: 130px;
+}
+
+.carousel-caption h3 {
+
+  text-transform: uppercase;
+  font-size: 12px;
+
+}
+
+.carousel-caption h4 {
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 15px;
+}
+
+h4 span {
+  color: var(--colorazul);
+  font-size: 35px;
+  text-transform: uppercase;
+}
+
+.carousel-caption p {
+  width: 100%;
+  margin: auto;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 1.9%;
+  margin-top: 30px;
+  text-wrap: balance;
+  line-height: normal;
+
+}
+
+
+.carousel-inner img {
+  height: 70vh;
+  width: auto;
+  object-fit: cover;
+  object-position: center center;
+}
+
+
+
+/* Seccion Sevicios*/
+.page-section {
+  margin-top: 3rem;
+  padding: 8rem 0;
+  background-color: var(--colorazul) !important;
+
+
+}
+
+.cuadrado-con-estilo {
+  position: relative;
+  overflow: hidden;
+}
+
+/*contacto*/
+
+.contact-form {
+  margin-bottom: 30px;
+}
+
+.map-area {
+  width: 100%;
+  height: 400px;
+
+}
+
+/* NAVBAR */
+
+.navbar-brand img {
+  width: auto;
+  height: 8rem;
+  margin-left: -40px;
+}
+
+.nav-link {
+  color: white !important;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1.7px;
+}
+
+.nav-item .active {
+  color: var(--colorRojo) !important;
+}
+
+.nav-link:hover {
+  color: var(--colorRojo) !important;
+}
+
+
+/* CARROUSEL */
+
+[data-aos] {
+  opacity: 0;
+  transition: opacity 0.10s ease-in-out;
+}
+
+[data-aos].aos-animate {
+  opacity: 3;
+}
+
+
+/*----------------------------------------------------------------------------------------------*/
+/*MEDIA QUERY*/
+/*----------------------------------------------------------------------------------------------*/
+
+/* Estilos para dispositivos móviles */
+@media (min-width: 576px) {
+
+  .carousel-item {
+    height: 80vh;
+  }
+
+  .carousel-caption {
+    bottom: 8.3rem;
+  }
+
+  .carousel-caption h3 {
+    font-size: 18px;
+  }
+
+  .carousel-caption h4 {
+    font-size: 35px;
+  }
+
+  h4 span {
+    font-size: 40px;
+  }
+
+  .carousel-caption p {
+    font-size: 12px;
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    margin-top: 150px;
+  }
+
+  .carousel-inner img {
+    height: 80vh;
+  }
+
+  .borde-club {
+    border: 1px solid #d6241c;
+    border-radius: 2px;
+    padding: 8px;
+  }
+}
+
+@media (min-width: 768px) {
+
+  .carousel-item {
+    height: 85vh;
+  }
+
+  .carousel-caption {
+    bottom: 9.9rem;
+  }
+
+  .carousel-caption h3 {
+    font-size: 20px;
+  }
+
+  .carousel-caption h4 {
+    font-size: 38px;
+  }
+
+  h4 span {
+    font-size: 43px;
+  }
+
+  .carousel-caption p {
+    font-size: 15px;
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    margin-top: 155px;
+  }
+
+  .carousel-inner img {
+    height: 85vh;
+  }
+
+}
+
+@media (min-width: 992px) {
+
+  #navbarNav {
+    background-color: transparent;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    
+  }
+  .navbar {
+    
+     margin: 10px 10px;
+    margin-top: 30px;
+    margin-inline: 30px;
+    border-radius: 15px;
+
+  }
+ 
+
+  .navbar-brand {
+    padding: 0 !important;
+    display: flex;
+    justify-content: end;
+    width: 100px;
+    height: 100%;
+  }
+  .nav-item {
+    border-bottom: none;
+  }
+
+  /* Estilos para la primera barra de navegación (manteniendo lo que ya tienes) */
+  header .navbar-scrolled {
+    background-color: black !important;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5) !important;
+    transition: all 0.5s ease;
+    margin: 0 !important;
+    border: 0 !important;
+    border-radius: 0;
+    padding: 0!important;
+    
+  }
+
+  .navbar-brand img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   
+  }
+
+  .nav-item {
+    margin: 0;
+    transition: all .3s ease-out;
+    border-bottom: none;
+   
+    
+  }
+  
+  
+  .navbar .container {
+    border-radius: 1rem;
+    height: 95px;
+    background-color: transparent;
+    
+  
+  }
+  
+  .red-border {
+    border: solid 3px #d6241c!important;
+    
+  
+  }
+  .navbar-nav {
+    align-items: center;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    padding-inline: 10px;
+   
+    
+  }
+  
+  .carousel-caption{
+    bottom:13rem;
+  }
+
+  .animated-button {
+    margin-top: 0 !important;
+  }
+  .carousel-caption h3 {
+    font-size: 23px;
+  }
+
+  .carousel-caption h4 {
+    font-size: 44px;
+  }
+
+  h4 span {
+    font-size: 47px;
+  }
+
+  .carousel-caption p {
+    font-size: 18px;
+  }
+
+}
+ @media(min-width:1200px){
+  .carousel-item {
+    height: 100vh;
+  }
+  .carousel-inner img {
+    height: 100vh;
+  }
+  .carousel-caption{
+    bottom:17rem;
+  }
+  .carousel-caption h3 {
+    font-size: 24px;
+  }
+
+  .carousel-caption h4 {
+    font-size: 48px;
+  }
+
+  h4 span {
+    font-size: 50px;
+  }
+
+  .carousel-caption p {
+    font-size: 21px;
+  }
+  .navbar .container {
+    border-radius: 1rem;
+    height: 100px;
+    background-color: transparent;
+    margin: 25px 60px;
+  
+  }
+  .nav-item{
+    margin: 6px;
+  }
+
+
+
+ }
+@media(min-width:1400px){
+  .navbar .container {
+   
+    margin: 25px 100px;
+  
+  }
+ }
+
+
+
+
+/*Contacto*/
+.contact-form {
+  background-color: rgba(80, 76, 76, 0.281);
+  box-shadow: rgba(0, 0, 0, 0, 0.35) 0 5px 15px;
+  padding: 40px 30px;
+  border-radius: 1%;
+
+
+}
+
+
+.botonContacto {
+  background: black;
+  border: 1px solid var(--colorRojo);
+  text-transform: uppercase;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.botonContacto:hover {
+  background: var(--colorRojo);
+  border: 1px solid black;
+
+
+}
+
+.map-area {
+
+  height: 605px;
+  background: #fff;
+  box-shadow: rgba(0, 0, 0, 0, 0.35) 0 5px 15px;
+
+
+}
+
+.map-area iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* FOOTER */
+/*:::::Pie de Pagina*/
+.pie-pagina {
+  width: 100%;
+  background-color: #0a141d;
+
+}
+
+.pie-pagina .grupo-1 {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 50px;
+  padding: 45px 0px;
+}
+
+.pie-pagina .grupo-1 .box figure {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pie-pagina .grupo-1 .box figure img {
+  width: 250px;
+}
+
+.pie-pagina .grupo-1 .box h2 {
+  color: #fff;
+  margin-bottom: 25px;
+  font-size: 22px;
+}
+
+.pie-pagina .grupo-1 .box p {
+  color: #efefef;
+  margin-bottom: 10px;
+}
+
+.pie-pagina .grupo-1 .red-social a {
+  display: inline-block;
+  text-decoration: none;
+  width: 40px;
+  height: 40px;
+  line-height: 45px;
+  color: #fff;
+  margin-right: 10px;
+  background-color: black;
+  text-align: center;
+  transition: all 300ms ease;
+}
+
+.pie-pagina .grupo-1 .red-social a:hover {
+  color: var(--colorRojo);
+}
+
+.pie-pagina .grupo-2 {
+  background-color: #0a1a2a;
+  padding: 15px 10px;
+  text-align: center;
+  color: #fff;
+}
+
+.pie-pagina .grupo-2 small {
+  font-size: 15px;
+}
+
+@media screen and (max-width:800px) {
+  .pie-pagina .grupo-1 {
+    width: 90%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
+    padding: 35px 0px;
+  }
+}
+
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100000;
+}
+
+.mi-clase-css {
+  border-radius: 100%;
+  height: 230px;
+  width: 230px;
+}
+
+.video-container {
+  background-color: var(--colorLila);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+video {
+  width: 100%;
+  max-width: 700px;
+  border: none;
+  border-radius: 1px;
+}
+
+
+video::-webkit-media-controls-panel {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+.button-container a {
+  font-size: 15px;
+  letter-spacing: 1px;
+  color: #ffffff;
+  background-color: var(--colorRojo);
+  padding: 15px 43px 15px 43px;
+  border-radius: 5px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 5px;
+
+
+}
+
+.button-container a:hover {
+  background-color: #0a141d;
+}
+
+.video-wrapper {
+  margin-bottom: 10px;
+  /* Puedes ajustar este margen según sea necesario */
+}
+
+#imageContainer {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 9999999;
+}
+
+
+
+.imgB {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.imgBBB {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin: auto;
+}
+
+
+
+.button {
+  position: absolute;
+  top: 70px;
+  right: 10px;
+  /* Ajustado para colocar el botón a la derecha */
+  transform: translate(0, -50%);
+  width: 4em;
+  height: 4em;
+  border: none;
+  background: rgba(180, 83, 107, 0.11);
+  border-radius: 5px;
+  transition: background 0.5s;
+}
+
+.X {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2em;
+  height: 1.5px;
+  background-color: rgb(255, 255, 255);
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.Y {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2em;
+  height: 1.5px;
+  background-color: #fff;
+  transform: translateX(-50%) rotate(-45deg);
+}
+
+.close {
+  position: absolute;
+  display: flex;
+  padding: 0.8rem 1.5rem;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-50%);
+  top: -70%;
+  left: 50%;
+  width: 3em;
+  height: 1.7em;
+  font-size: 12px;
+  background-color: rgb(19, 22, 24);
+  color: rgb(187, 229, 236);
+  border: none;
+  border-radius: 3px;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.button:hover {
+  background-color: rgb(211, 21, 21);
+}
+
+.button:active {
+  background-color: rgb(130, 0, 0);
+}
+
+.button:hover>.close {
+  animation: close 0.2s forwards 0.25s;
+}
+
+@keyframes close {
+  100% {
+    opacity: 1;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+.gallery {
+  padding: 80px 0;
+}
+
+.gallery img {
+  background-color: rgba(80, 76, 76, 0.281);
+  padding: 15px;
+  width: 100%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+#gallery-modal {
+
+  width: 100%;
+
+}
+
+.modal {
+  display: none;
+  /* Oculta el modal por defecto */
+}
+
+.modal-dialog {
+  max-width: 100vh;
+  /* Establece el ancho máximo del modal al 80% del ancho de la ventana */
+}
+
+
+
+.modal-header {
+  background-color: #333;
+  /* Cambia el color de fondo del encabezado del modal */
+  color: #fff;
+  /* Cambia el color del texto del encabezado del modal */
+  padding: 25px;
+  /* Añade un relleno al encabezado del modal */
+}
+
+.modal-body {
+  text-align: center;
+  /* Centra el contenido del cuerpo del modal */
+
+}
+
+.modal-img {
+  max-width: 100%;
+  /* Ajusta la imagen al 100% del ancho del contenedor */
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  /* Agrega una sombra suave a la imagen */
+}
+
+.btn-x {
+  color: var(--colorRojo);
+  /* Cambia el color del botón de cierre */
+  font-size: 55px;
+  /* Ajusta el tamaño del texto del botón de cierre */
+  background: none;
+  /* Elimina el fondo del botón de cierre */
+  border: none;
+  /* Elimina el borde del botón de cierre */
+  cursor: pointer;
+  /* Cambia el cursor al pasar sobre el botón de cierre */
+  position: absolute;
+  /* Establece la posición absoluta para el botón de cierre */
+  top: -18px;
+  /* Ajusta la posición vertical del botón de cierre */
+  right: 10px;
+  /* Ajusta */
+}
